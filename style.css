@@ -1,4 +1,3 @@
- /* Estilo básico para melhorar o layout do formulário */
  body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -6,13 +5,20 @@
     padding: 20px;
 }
 
-.form-container {
+body .form-container {
+    display: grid;
+    grid-template-columns: repeat(1, 380px);
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     max-width: 400px;
     margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body .requiridos {
+    font-size: small;
+    margin-bottom: 15px;
 }
 
 label {
@@ -23,7 +29,8 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="number"] {
+input[type="number"],
+input[type="tel"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;

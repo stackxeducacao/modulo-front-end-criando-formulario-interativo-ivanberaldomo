@@ -10,26 +10,21 @@
 <body>
     <div class="form-container">
         <form action="/send-data" method="POST">
-            <!-- Campo para Nome com rótulo -->
-            <label for="nome">Nome:</label>
-            <input type="text" id="name" name="name" required>
-
-            <!-- Campo para Email com rótulo -->
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome completo sem abreviações" required>
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-
-            <!-- Campo para Idade com rótulo -->
+            <input type="email" id="email" name="email" placeholder="email@gmail.com" required>
+            <label for="phone">Celular ou Telefone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+55 (XX) XXXXX-XXXX"
+                pattern="\+55\s?\(?[1-9]{2}\)?\s?[0-9]{4,5}-?[0-9]{4}" required>
             <label for="age">Idade:</label>
-            <input type="number" id="age" name="age">
-
-            <!-- Caixa de seleção para aceite de termos -->
+            <input type="number" id="age" name="age" min="0" placeholder="Qual a sua idade?" required>
+            <div class="requiridos">*Todos os campos acima são requiridos</div>
             <label for="terms-and-conditions">
                 <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
                 Aceito os termos e condições
             </label>
-
-            <!-- Botão de envio -->
-            <input type="submit" value="send">
+            <input type="submit" value="Enviar">
         </form>
     </div>
 
